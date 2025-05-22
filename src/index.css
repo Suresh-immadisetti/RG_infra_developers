@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap');
+
+:root {
+  --primary-gold: #B3A180;
+  --primary-blue: #1B2D37;
+  --light-gold: #c5b699;
+  --dark-gold: #9a8966;
+  --light-blue: #2d4655;
+  --dark-blue: #132028;
+  --off-white: #F9F9F7;
+  --light-gray: #E5E5E5;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-gray-800 font-raleway;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair text-primary-blue;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl font-semibold;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-semibold;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl font-medium;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl font-medium;
+  }
+
+  p {
+    @apply text-base leading-relaxed;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-2.5 rounded-md font-medium transition-all duration-300 inline-block;
+  }
+
+  .btn-primary {
+    @apply bg-primary-gold text-white hover:bg-dark-gold;
+  }
+
+  .btn-secondary {
+    @apply bg-primary-blue text-white hover:bg-light-blue;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary-gold text-primary-gold hover:bg-primary-gold hover:text-white;
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl font-semibold mb-8 relative inline-block;
+  }
+
+  .section-heading::after {
+    content: '';
+    @apply absolute w-1/2 h-1 bg-primary-gold bottom-0 left-0 -mb-2 rounded;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg;
+  }
+
+  .section-padding {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+.scale-in {
+  animation: scaleIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Project Status Badges */
+.badge {
+  @apply px-3 py-1 rounded-full text-xs font-semibold;
+}
+
+.badge-upcoming {
+  @apply bg-blue-500/20 text-blue-700;
+}
+
+.badge-present {
+  @apply bg-green-500/20 text-green-700;
+}
+
+.badge-completed {
+  @apply bg-amber-500/20 text-amber-700;
+}
+
+/* Hero section with parallax */
+.hero-parallax {
+  @apply relative overflow-hidden;
+  height: 80vh;
+  min-height: 500px;
+}
+
+.parallax-bg {
+  @apply absolute inset-0 bg-center bg-cover;
+  transform: translateZ(-10px) scale(2);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light-gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-gold);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-gold);
+}
