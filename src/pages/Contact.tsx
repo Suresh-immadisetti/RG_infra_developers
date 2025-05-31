@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 interface FormData {
   name: string;
@@ -75,26 +75,34 @@ const Contact = () => {
     if (validateForm()) {
       setIsSubmitting(true);
       
-      // Simulate API call
+      // Prepare WhatsApp message
+      const message = `New Contact Form Submission:%0A%0A
+        Name: ${formData.name}%0A
+        Email: ${formData.email}%0A
+        Phone: ${formData.phone}%0A
+        Interest: ${formData.interest}%0A
+        Subject: ${formData.subject}%0A
+        Message: ${formData.message}`;
+      
+      // Open WhatsApp with pre-filled message
+      window.open(`https://wa.me/919966966863?text=${message}`, '_blank');
+      
+      // Reset form
+      setIsSubmitting(false);
+      setSubmitSuccess(true);
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: '',
+        interest: 'residential'
+      });
+      
+      // Reset success message after a delay
       setTimeout(() => {
-        setIsSubmitting(false);
-        setSubmitSuccess(true);
-        
-        // Reset form after successful submission
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          subject: '',
-          message: '',
-          interest: 'residential'
-        });
-        
-        // Reset success message after a delay
-        setTimeout(() => {
-          setSubmitSuccess(false);
-        }, 5000);
-      }, 1500);
+        setSubmitSuccess(false);
+      }, 5000);
     }
   };
 
@@ -131,8 +139,7 @@ const Contact = () => {
                     <div className="ml-4">
                       <h3 className="text-lg font-medium">Our Location</h3>
                       <p className="text-gray-600 mt-1">
-                        123 Business Avenue, Corporate District<br />
-                        Hyderabad, 500081
+                        C-3, 12-1-863/2, Beside Asif Nagar Police Station, Mehdipatnam, Hyderabad, T.G -500028
                       </p>
                     </div>
                   </div>
@@ -147,12 +154,12 @@ const Contact = () => {
                     <div className="ml-4">
                       <h3 className="text-lg font-medium">Call Us</h3>
                       <p className="text-gray-600 mt-1">
-                        <a href="tel:+1234567890" className="hover:text-primary-gold transition-colors">
-                          +123 456 7890
+                        <a href="tel:+91 9966966863" className="hover:text-primary-gold transition-colors">
+                          +91 9966966863
                         </a>
                         <br />
-                        <a href="tel:+1234567891" className="hover:text-primary-gold transition-colors">
-                          +123 456 7891
+                        <a href="tel:+91 9182695782" className="hover:text-primary-gold transition-colors">
+                          +91 9182695782
                         </a>
                       </p>
                     </div>
@@ -168,12 +175,8 @@ const Contact = () => {
                     <div className="ml-4">
                       <h3 className="text-lg font-medium">Email Us</h3>
                       <p className="text-gray-600 mt-1">
-                        <a href="mailto:info@rginfra.com" className="hover:text-primary-gold transition-colors">
-                          info@rginfra.com
-                        </a>
-                        <br />
-                        <a href="mailto:sales@rginfra.com" className="hover:text-primary-gold transition-colors">
-                          sales@rginfra.com
+                        <a href="mailto:rginfradevelopersinfo@gmail.com" className="hover:text-primary-gold transition-colors">
+                          rginfradevelopersinfo@gmail.com
                         </a>
                       </p>
                     </div>
@@ -201,16 +204,34 @@ const Contact = () => {
                 <div className="mt-8">
                   <h3 className="text-lg font-medium mb-4">Follow Us</h3>
                   <div className="flex space-x-4">
-                    {['facebook', 'twitter', 'instagram', 'linkedin'].map((platform) => (
-                      <a 
-                        key={platform}
-                        href="#" 
-                        className="h-10 w-10 rounded-full bg-gray-100 hover:bg-primary-gold hover:text-white transition-colors flex items-center justify-center"
-                        aria-label={`Follow on ${platform}`}
-                      >
-                        <span className="capitalize">{platform.charAt(0)}</span>
-                      </a>
-                    ))}
+                    <a 
+                      href="#" 
+                      className="h-10 w-10 rounded-full bg-gray-100 hover:bg-blue-600 hover:text-white transition-colors flex items-center justify-center text-blue-600"
+                      aria-label="Follow on Facebook"
+                    >
+                      <Facebook size={18} />
+                    </a>
+                    <a 
+                      href="#" 
+                      className="h-10 w-10 rounded-full bg-gray-100 hover:bg-sky-500 hover:text-white transition-colors flex items-center justify-center text-sky-500"
+                      aria-label="Follow on Twitter"
+                    >
+                      <Twitter size={18} />
+                    </a>
+                    <a 
+                      href="#" 
+                      className="h-10 w-10 rounded-full bg-gray-100 hover:bg-pink-600 hover:text-white transition-colors flex items-center justify-center text-pink-600"
+                      aria-label="Follow on Instagram"
+                    >
+                      <Instagram size={18} />
+                    </a>
+                    <a 
+                      href="#" 
+                      className="h-10 w-10 rounded-full bg-gray-100 hover:bg-blue-700 hover:text-white transition-colors flex items-center justify-center text-blue-700"
+                      aria-label="Follow on LinkedIn"
+                    >
+                      <Linkedin size={18} />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -378,17 +399,19 @@ const Contact = () => {
         </div>
       </section>
       
-      {/* Map section (placeholder) */}
+      {/* Map section */}
       <section className="py-8">
         <div className="container-custom">
           <div className="bg-white rounded-lg shadow-sm overflow-hidden h-[400px]">
-            <div className="h-full w-full bg-gray-200 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin size={48} className="text-primary-gold mx-auto mb-4" />
-                <h3 className="text-xl font-semibold">Map Integration</h3>
-                <p className="text-gray-600">Interactive map would be displayed here</p>
-              </div>
-            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.050835999444!2d78.44863231534383!3d17.40688798806493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb972e9e6d5f0f%3A0x1e3e0b8b9b9b9b9b!2sC-3%2C%2012-1-863%2F2%2C%20Beside%20Asif%20Nagar%20Police%20Station%2C%20Mehdipatnam%2C%20Hyderabad%2C%20Telangana%20500028!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              title="RG Infra Developers Location"
+            ></iframe>
           </div>
         </div>
       </section>

@@ -45,12 +45,6 @@ const Navbar = () => {
                 {item}
               </Link>
             ))}
-            <a 
-              href="tel:+1234567890" 
-              className="btn btn-primary flex items-center gap-2"
-            >
-              <Phone size={16} /> Contact Us
-            </a>
           </nav>
           
           {/* Mobile Menu Button */}
@@ -80,11 +74,11 @@ const Navbar = () => {
             </Link>
           ))}
           <div className="flex flex-col gap-2 pt-2">
-            <a href="tel:+1234567890" className="flex items-center gap-2 text-primary-blue">
-              <Phone size={16} /> +123 456 7890
+            <a href="tel:+919966966863" className="flex items-center gap-2 text-primary-blue">
+              <Phone size={16} /> +91 9966966863
             </a>
-            <a href="mailto:info@rginfra.com" className="flex items-center gap-2 text-primary-blue">
-              <Mail size={16} /> info@rginfra.com
+            <a href="mailto:rginfradevelopersinfo@gmail.com" className="flex items-center gap-2 text-primary-blue">
+              <Mail size={16} /> rginfradevelopersinfo@gmail.com
             </a>
           </div>
         </div>

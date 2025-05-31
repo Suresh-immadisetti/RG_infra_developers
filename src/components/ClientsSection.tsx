@@ -1,42 +1,47 @@
 import { useState, useEffect, useRef } from 'react';
 
-// Sample client data
+import runsEraLogo from '../assets/logos/runs_era.png';
+import njrLogo from '../assets/logos/njr.png';
+import vertexLogo from '../assets/logos/vertex.png';
+import hallmarkLogo from '../assets/logos/hallmark.png';
+
+import saiAvatar from '../assets/avatars/sai.png';
+import rajeshAvatar from '../assets/avatars/rajesh.png';
+import sureshAvatar from '../assets/avatars/suresh.png';
+
+// Sample client data with local images
 const clients = [
-  { id: 1, name: 'Acme Corporation', logo: 'https://via.placeholder.com/150?text=ACME', description: 'Leading technology solutions provider' },
-  { id: 2, name: 'Global Industries', logo: 'https://via.placeholder.com/150?text=GLOBAL', description: 'International manufacturing company' },
-  { id: 3, name: 'Nexus Ventures', logo: 'https://via.placeholder.com/150?text=NEXUS', description: 'Investment and venture capital firm' },
-  { id: 4, name: 'Evergreen Properties', logo: 'https://via.placeholder.com/150?text=EVERGREEN', description: 'Sustainable real estate development' },
-  { id: 5, name: 'Summit Holdings', logo: 'https://via.placeholder.com/150?text=SUMMIT', description: 'Diversified business conglomerate' },
-  { id: 6, name: 'Crystal Developers', logo: 'https://via.placeholder.com/150?text=CRYSTAL', description: 'Premium residential projects' },
-  { id: 7, name: 'Artisan Spaces', logo: 'https://via.placeholder.com/150?text=ARTISAN', description: 'Innovative interior design solutions' },
-  { id: 8, name: 'Metropolitan Group', logo: 'https://via.placeholder.com/150?text=METRO', description: 'Urban development specialists' },
+  { id: 1, name: 'RunsEra Digital Solutions Private Limited', logo: runsEraLogo, description: 'Builds major infrastructure and urban projects' },
+  { id: 2, name: 'NJR Constructions Private Limited', logo: njrLogo, description: 'Executes industrial and infrastructure works' },
+  { id: 3, name: 'Vertex Homes', logo: vertexLogo, description: 'Delivers iconic global buildings.' },
+  { id: 4, name: 'Hallmark Builders', logo: hallmarkLogo, description: 'Specializes in bridges and tunnels' }
 ];
 
-// Testimonials data
+// Testimonials with local avatars
 const testimonials = [
   {
     id: 1,
-    client: 'John Smith',
+    client: 'Sai Durgesh',
     company: 'Acme Corporation',
     role: 'CEO',
     content: 'RG Infra Developers delivered our corporate headquarters ahead of schedule and with exceptional quality. Their attention to detail and commitment to sustainability aligned perfectly with our company values.',
-    avatar: 'https://randomuser.me/api/portraits/men/1.jpg',
+    avatar: saiAvatar,
   },
   {
     id: 2,
-    client: 'Emily Johnson',
+    client: 'Marasu Rajesh',
     company: 'Global Industries',
     role: 'Director of Facilities',
     content: 'We have partnered with RG Infra for three consecutive projects, and they continue to exceed our expectations. Their team\'s professionalism and innovative solutions have made them our preferred development partner.',
-    avatar: 'https://randomuser.me/api/portraits/women/2.jpg',
+    avatar: rajeshAvatar,
   },
   {
     id: 3,
-    client: 'Michael Chen',
-    company: 'Nexus Ventures',
+    client: 'Immadisetti Suresh',
+    company: 'Gems Ventures',
     role: 'Investment Manager',
     content: 'As investors in multiple real estate projects, we value partners who deliver consistent returns. RG Infra has proven time and again that they understand market dynamics and build properties that appreciate in value.',
-    avatar: 'https://randomuser.me/api/portraits/men/3.jpg',
+    avatar: sureshAvatar,
   },
 ];
 
@@ -48,7 +53,6 @@ const ClientsSection = () => {
     const interval = setInterval(() => {
       setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
     }, 5000);
-    
     return () => clearInterval(interval);
   }, []);
 
@@ -68,47 +72,46 @@ const ClientsSection = () => {
             We take pride in our relationships with industry leaders who trust us with their real estate needs.
           </p>
         </div>
-        
+
         {/* Clients logos */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           {clients.map((client) => (
-            <div 
-              key={client.id} 
+            <div
+              key={client.id}
               className="bg-white rounded-lg p-6 shadow-sm flex flex-col items-center justify-center text-center hover:shadow-md transition-shadow"
             >
-              <img 
-                src={client.logo} 
-                alt={client.name} 
-                className="h-16 object-contain mb-4 grayscale hover:grayscale-0 transition-all"
+              <img
+                src={client.logo}
+                alt={client.name}
+                className="h-16 object-contain mb-4 transition-all"
               />
-              <h4 className="text-primary-blue font-medium">{client.name}</h4>
+              <h4 className="text-primary-blue font-medium text-sm">{client.name}</h4>
               <p className="text-sm text-gray-500 mt-1">{client.description}</p>
             </div>
           ))}
         </div>
-        
+
         {/* Testimonials */}
         <div className="mt-20">
           <h3 className="text-2xl md:text-3xl font-semibold text-center mb-12">What Our Clients Say</h3>
-          
+
           <div className="relative overflow-hidden">
             {/* Testimonial slider */}
-            <div 
-              ref={sliderRef} 
+            <div
+              ref={sliderRef}
               className="flex transition-transform duration-500 ease-in-out"
               style={{ width: `${testimonials.length * 100}%` }}
             >
               {testimonials.map((testimonial) => (
-                <div 
-                  key={testimonial.id} 
-                  className="w-full px-4 md:px-8" 
-                  style={{ width: `${100 / testimonials.length}%` }}
+                <div
+                  key={testimonial.id}
+                  className="min-w-full px-4 md:px-8 flex-shrink-0"
                 >
                   <div className="bg-white p-8 rounded-lg shadow-custom">
                     <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
-                      <img 
-                        src={testimonial.avatar} 
-                        alt={testimonial.client} 
+                      <img
+                        src={testimonial.avatar}
+                        alt={testimonial.client}
                         className="w-20 h-20 rounded-full object-cover border-4 border-primary-gold"
                       />
                       <div>
@@ -130,7 +133,7 @@ const ClientsSection = () => {
                 </div>
               ))}
             </div>
-            
+
             {/* Navigation dots */}
             <div className="flex justify-center mt-8">
               {testimonials.map((_, index) => (

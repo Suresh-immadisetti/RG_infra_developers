@@ -1,5 +1,9 @@
 import { useEffect } from 'react';
 import { Award, Target, Users, Shield, Activity, Map } from 'lucide-react';
+// Import images from assets
+import ChairmanImage from '../assets/chairman.jpg';
+import MDImage from '../assets/md.jpg';
+import CompanyHistoryImage from '../assets/company-history.jpg';
 
 const About = () => {
   useEffect(() => {
@@ -49,13 +53,117 @@ const About = () => {
             </div>
             <div className="relative">
               <img 
-                src="https://images.pexels.com/photos/1643384/pexels-photo-1643384.jpeg" 
+                src={CompanyHistoryImage}
                 alt="RG Infra Developers History" 
-                className="rounded-lg shadow-lg"
+                className="rounded-lg shadow-lg w-full"
               />
               <div className="absolute -bottom-10 -left-10 bg-white p-6 rounded-lg shadow-lg">
                 <div className="text-5xl font-bold text-primary-gold">18+</div>
                 <div className="text-gray-600">Years of Excellence</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+       {/* Leadership Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container-custom">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-semibold mb-4">Our Leadership</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              Visionary leaders guiding our journey towards excellence
+            </p>
+          </div>
+
+          {/* Chairman Section - Image Right */}
+          <div className="mb-24">
+            <div className="flex flex-col lg:flex-row gap-12 items-center">
+              <div className="lg:w-1/2 order-2 lg:order-1">
+                <h3 className="text-2xl md:text-3xl font-semibold mb-4">Mr. Thiresh Naidu</h3>
+                <p className="text-primary-gold font-medium mb-6">Founder & Chairman</p>
+                <p className="text-gray-600 mb-6">
+                  With over 30 years of experience in real estate development, Mr. Thiresh Naidu 
+                  founded RG Infra Developers with a vision to create landmark properties that 
+                  redefine urban living. His strategic vision and commitment to quality have been 
+                  instrumental in shaping the company's success.
+                </p>
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-lg">Key Contributions:</h4>
+                  <ul className="space-y-3 text-gray-600">
+                    <li className="flex items-start">
+                      <span className="inline-block w-2 h-2 bg-primary-gold rounded-full mt-2 mr-3"></span>
+                      Pioneered sustainable construction practices in the region
+                    </li>
+                    <li className="flex items-start">
+                      <span className="inline-block w-2 h-2 bg-primary-gold rounded-full mt-2 mr-3"></span>
+                      Established strong relationships with government and industry bodies
+                    </li>
+                    <li className="flex items-start">
+                      <span className="inline-block w-2 h-2 bg-primary-gold rounded-full mt-2 mr-3"></span>
+                      Recipient of the "Real Estate Visionary Award" 2020
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="lg:w-1/2 order-1 lg:order-2 relative">
+                <div className="relative aspect-[4/5]">
+                  <img 
+                    src={ChairmanImage}
+                    alt="Mr. Rajesh Gupta - Chairman" 
+                    className="absolute inset-0 w-full h-full object-cover rounded-xl shadow-xl"
+                  />
+                  <div className="absolute -bottom-6 -right-6 bg-primary-gold text-white p-4 rounded-lg shadow-lg">
+                    <div className="text-2xl font-bold">30+</div>
+                    <div className="text-sm">Years Experience</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* MD Section - Image Left */}
+          <div className="pt-12">
+            <div className="flex flex-col lg:flex-row gap-12 items-center">
+              <div className="lg:w-1/2 relative">
+                <div className="relative aspect-[4/5]">
+                  <img 
+                    src={MDImage}
+                    alt="Mr. Thiresh Naidu - Managing Director" 
+                    className="absolute inset-0 w-full h-full object-cover rounded-xl shadow-xl"
+                  />
+                  <div className="absolute -bottom-6 -left-6 bg-primary-blue text-white p-4 rounded-lg shadow-lg">
+                    <div className="text-2xl font-bold">15+</div>
+                    <div className="text-sm">Years Experience</div>
+                  </div>
+                </div>
+              </div>
+              <div className="lg:w-1/2">
+                <h3 className="text-2xl md:text-3xl font-semibold mb-4">Mr. Thiresh Naidu</h3>
+                <p className="text-primary-gold font-medium mb-6">Managing Director</p>
+                <p className="text-gray-600 mb-6">
+                  Ms. Priya Sharma brings 15 years of international experience in real estate 
+                  development and management. Since taking over as MD in 2018, she has driven 
+                  innovation, operational excellence, and digital transformation across all 
+                  company projects.
+                </p>
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-lg">Key Achievements:</h4>
+                  <ul className="space-y-3 text-gray-600">
+                    <li className="flex items-start">
+                      <span className="inline-block w-2 h-2 bg-primary-gold rounded-full mt-2 mr-3"></span>
+                      Implemented cutting-edge construction technologies
+                    </li>
+                    <li className="flex items-start">
+                      <span className="inline-block w-2 h-2 bg-primary-gold rounded-full mt-2 mr-3"></span>
+                      Expanded company operations to 3 new states
+                    </li>
+                    <li className="flex items-start">
+                      <span className="inline-block w-2 h-2 bg-primary-gold rounded-full mt-2 mr-3"></span>
+                      Recognized as "Young Leader in Real Estate" by Economic Times
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -175,55 +283,6 @@ const About = () => {
                 <div className="text-primary-gold mb-4">{value.icon}</div>
                 <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
                 <p className="text-gray-600">{value.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      
-      {/* Team section (placeholder) */}
-      <section className="py-16 bg-gray-50">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-semibold mb-4">Leadership Team</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              Meet the visionaries leading RG Infra Developers
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                name: 'Rajesh Gupta',
-                position: 'Founder & Chairman',
-                image: 'https://randomuser.me/api/portraits/men/32.jpg'
-              },
-              {
-                name: 'Priya Sharma',
-                position: 'Managing Director',
-                image: 'https://randomuser.me/api/portraits/women/44.jpg'
-              },
-              {
-                name: 'Vikram Mehta',
-                position: 'Chief Architect',
-                image: 'https://randomuser.me/api/portraits/men/68.jpg'
-              },
-              {
-                name: 'Anjali Reddy',
-                position: 'Head of Operations',
-                image: 'https://randomuser.me/api/portraits/women/65.jpg'
-              }
-            ].map((member, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-sm overflow-hidden">
-                <img 
-                  src={member.image} 
-                  alt={member.name} 
-                  className="w-full h-64 object-cover object-center"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold">{member.name}</h3>
-                  <p className="text-primary-gold">{member.position}</p>
-                </div>
               </div>
             ))}
           </div>

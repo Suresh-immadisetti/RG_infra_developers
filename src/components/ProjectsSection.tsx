@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import ProjectCard from './ProjectCard';
 import { useProjects, ProjectStatus } from '../context/ProjectsContext';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 
 const ProjectsSection = () => {
   const { filteredProjects, filterProjectsByStatus, currentFilter } = useProjects();
   const [isAnimating, setIsAnimating] = useState(false);
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   
   const handleFilterChange = (status: ProjectStatus | 'all') => {
     if (status !== currentFilter) {
@@ -12,6 +15,15 @@ const ProjectsSection = () => {
       setTimeout(() => {
         filterProjectsByStatus(status);
         setIsAnimating(false);
+        
+        // Update URL with filter parameter
+        const newSearchParams = new URLSearchParams(searchParams.toString());
+        if (status === 'all') {
+          newSearchParams.delete('filter');
+        } else {
+          newSearchParams.set('filter', status);
+        }
+        navigate(`/projects?${newSearchParams.toString()}`, { replace: true });
       }, 300);
     }
   };
@@ -60,8 +72,8 @@ const ProjectsSection = () => {
         {/* Show more button */}
         {filteredProjects.length > 0 && (
           <div className="text-center mt-12">
-            <a 
-              href="/projects" 
+            <button 
+              onClick={() => navigate('/projects')}
               className="btn btn-outline inline-flex items-center"
             >
               View All Projects
@@ -78,7 +90,7 @@ const ProjectsSection = () => {
                   d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
               </svg>
-            </a>
+            </button>
           </div>
         )}
         

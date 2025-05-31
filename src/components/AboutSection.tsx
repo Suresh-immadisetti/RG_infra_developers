@@ -62,7 +62,7 @@ const AboutSection = () => {
           <div className="slide-up">
             <h2 className="section-heading mb-6">About RG Infra Developers</h2>
             <p className="text-gray-600 mb-6">
-              Founded in 2005, RG Infra Developers has established itself as a premier real estate 
+              Founded in 2022, RG Infra Developers has established itself as a premier real estate 
               developer in Hyderabad, specializing in residential and commercial properties that 
               blend luxury with functionality.
             </p>
@@ -107,7 +107,7 @@ const AboutSection = () => {
               
               {/* Experience label */}
               <div className="absolute bottom-0 left-0 bg-primary-gold text-white p-4 rounded-tr-lg">
-                <p className="text-3xl font-bold">18+</p>
+                <p className="text-3xl font-bold">3+</p>
                 <p className="text-sm uppercase tracking-wide">Years of Excellence</p>
               </div>
             </div>
@@ -128,10 +128,10 @@ const AboutSection = () => {
         
         {/* Stats/counter section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-20">
-          <AnimatedCounter value={50} title="Projects Completed" icon={Building} />
-          <AnimatedCounter value={2500} title="Happy Families" icon={Users} />
-          <AnimatedCounter value={18} title="Years of Experience" icon={Award} />
-          <AnimatedCounter value={25} title="Ongoing Projects" icon={PenTool} />
+          <AnimatedCounter value={10} title="Projects Completed" icon={Building} />
+          <AnimatedCounter value={500} title="Happy Families" icon={Users} />
+          <AnimatedCounter value={3} title="Years of Experience" icon={Award} />
+          <AnimatedCounter value={5} title="Ongoing Projects" icon={PenTool} />
         </div>
       </div>
     </section>

@@ -1,6 +1,8 @@
 import { Building2, Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
+// Define the interface for Footer props
 interface FooterProps {
   visitorCount: number;
 }
@@ -8,6 +10,28 @@ interface FooterProps {
 const Footer = ({ visitorCount }: FooterProps) => {
   const currentYear = new Date().getFullYear();
   
+  const projectCategories = [
+    'Residential', 
+    'Office Spaces',
+    'Education',
+    'Co-Living',
+    'Co-Working',
+    'Hospitality',
+    'Retail',
+    'Facility Management',
+    'Data Centres',
+    'Commercial', 
+    'Corporate Interiors',
+    'Design & Build'
+  ];
+
+  const quickLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'Projects', path: '/projects' },
+    { name: 'About Us', path: '/about' },
+    { name: 'Contact', path: '/contact' }
+  ];
+
   return (
     <footer className="bg-primary-blue text-white">
       <div className="container-custom section-padding">
@@ -45,13 +69,13 @@ const Footer = ({ visitorCount }: FooterProps) => {
           <div>
             <h4 className="text-white font-medium text-lg mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {['Home', 'Projects', 'About Us', 'Contact', 'Careers', 'Privacy Policy'].map((item) => (
-                <li key={item}>
+              {quickLinks.map((link) => (
+                <li key={link.name}>
                   <Link 
-                    to={item === 'Home' ? '/' : `/${item.toLowerCase().replace(/\s+/g, '-')}`}
+                    to={link.path}
                     className="text-gray-300 hover:text-primary-gold transition-colors flex items-center"
                   >
-                    <span className="mr-2">›</span> {item}
+                    <span className="mr-2">›</span> {link.name}
                   </Link>
                 </li>
               ))}
@@ -61,18 +85,18 @@ const Footer = ({ visitorCount }: FooterProps) => {
           {/* Projects */}
           <div>
             <h4 className="text-white font-medium text-lg mb-4">Our Projects</h4>
-            <ul className="space-y-2">
-              {['Residential', 'Commercial', 'Upcoming Projects', 'Completed Projects'].map((item) => (
-                <li key={item}>
+            <div className="grid grid-cols-2 gap-x-4 gap-y-2">
+              {projectCategories.map((item) => (
+                <div key={item}>
                   <Link 
                     to="/projects"
-                    className="text-gray-300 hover:text-primary-gold transition-colors flex items-center"
+                    className="text-gray-300 hover:text-primary-gold transition-colors flex items-center text-sm"
                   >
-                    <span className="mr-2">›</span> {item}
+                    <span className="mr-1">›</span> {item}
                   </Link>
-                </li>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
           
           {/* Contact Info */}
@@ -81,18 +105,18 @@ const Footer = ({ visitorCount }: FooterProps) => {
             <ul className="space-y-4">
               <li className="flex">
                 <MapPin size={20} className="text-primary-gold mr-3 flex-shrink-0 mt-1" />
-                <span className="text-gray-300">123 Business Avenue, Corporate District, City, 12345</span>
+                <span className="text-gray-300">C-3, 12-1-863/2, Beside Asif Nagar Police Station, Mehdipatnam, Hyderabad, T.G -500028</span>
               </li>
               <li className="flex items-center">
                 <Phone size={20} className="text-primary-gold mr-3 flex-shrink-0" />
-                <a href="tel:+1234567890" className="text-gray-300 hover:text-primary-gold transition-colors">
-                  +123 456 7890
+                <a href="tel:9966966863" className="text-gray-300 hover:text-primary-gold transition-colors">
+                  996696863 - 9182695782
                 </a>
               </li>
               <li className="flex items-center">
                 <Mail size={20} className="text-primary-gold mr-3 flex-shrink-0" />
-                <a href="mailto:info@rginfra.com" className="text-gray-300 hover:text-primary-gold transition-colors">
-                  info@rginfra.com
+                <a href="mailto:rginfradevelopersinfo@gmail.com" className="text-gray-300 hover:text-primary-gold transition-colors">
+                  rginfradevelopersinfo@gmail.com
                 </a>
               </li>
             </ul>
