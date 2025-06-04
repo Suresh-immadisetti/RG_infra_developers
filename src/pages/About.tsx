@@ -22,7 +22,7 @@ const About = () => {
         <div className="container-custom relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl font-playfair font-bold text-white mb-4">About Our Company</h1>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-            Building dreams and transforming skylines since 2005
+            Building dreams and transforming skylines since 2021
           </p>
         </div>
       </section>
@@ -34,7 +34,7 @@ const About = () => {
             <div>
               <h2 className="text-3xl md:text-4xl font-semibold mb-6">Our Story</h2>
               <p className="text-gray-600 mb-6">
-                RG Infra Developers was founded in 2005 by Rajesh Gupta with a vision to create 
+                RG Infra Developers was founded in 2021 by Sagar Donakanti with a vision to create 
                 exceptional living and working spaces that stand the test of time. What began as 
                 a small family business has grown into one of the region's most respected real 
                 estate development companies.
@@ -58,7 +58,7 @@ const About = () => {
                 className="rounded-lg shadow-lg w-full"
               />
               <div className="absolute -bottom-10 -left-10 bg-white p-6 rounded-lg shadow-lg">
-                <div className="text-5xl font-bold text-primary-gold">18+</div>
+                <div className="text-5xl font-bold text-primary-gold">4+</div>
                 <div className="text-gray-600">Years of Excellence</div>
               </div>
             </div>
@@ -80,10 +80,10 @@ const About = () => {
           <div className="mb-24">
             <div className="flex flex-col lg:flex-row gap-12 items-center">
               <div className="lg:w-1/2 order-2 lg:order-1">
-                <h3 className="text-2xl md:text-3xl font-semibold mb-4">Mr. Thiresh Naidu</h3>
-                <p className="text-primary-gold font-medium mb-6">Founder & Chairman</p>
+                <h3 className="text-2xl md:text-3xl font-semibold mb-4">Mr. Rahul Ganga</h3>
+                <p className="text-primary-gold font-medium mb-6">Chairman</p>
                 <p className="text-gray-600 mb-6">
-                  With over 30 years of experience in real estate development, Mr. Thiresh Naidu 
+                  With over 30 years of experience in real estate development, Mr. Rahul Ganga  
                   founded RG Infra Developers with a vision to create landmark properties that 
                   redefine urban living. His strategic vision and commitment to quality have been 
                   instrumental in shaping the company's success.
@@ -110,7 +110,7 @@ const About = () => {
                 <div className="relative aspect-[4/5]">
                   <img 
                     src={ChairmanImage}
-                    alt="Mr. Rajesh Gupta - Chairman" 
+                    alt="Mr. Rahul Ganga - Chairman" 
                     className="absolute inset-0 w-full h-full object-cover rounded-xl shadow-xl"
                   />
                   <div className="absolute -bottom-6 -right-6 bg-primary-gold text-white p-4 rounded-lg shadow-lg">
@@ -129,21 +129,21 @@ const About = () => {
                 <div className="relative aspect-[4/5]">
                   <img 
                     src={MDImage}
-                    alt="Mr. Thiresh Naidu - Managing Director" 
+                    alt="Mr. Sagar Donakanti - Managing Director" 
                     className="absolute inset-0 w-full h-full object-cover rounded-xl shadow-xl"
                   />
                   <div className="absolute -bottom-6 -left-6 bg-primary-blue text-white p-4 rounded-lg shadow-lg">
-                    <div className="text-2xl font-bold">15+</div>
+                    <div className="text-2xl font-bold">5+</div>
                     <div className="text-sm">Years Experience</div>
                   </div>
                 </div>
               </div>
               <div className="lg:w-1/2">
-                <h3 className="text-2xl md:text-3xl font-semibold mb-4">Mr. Thiresh Naidu</h3>
-                <p className="text-primary-gold font-medium mb-6">Managing Director</p>
+                <h3 className="text-2xl md:text-3xl font-semibold mb-4">Mr. Sagar Donakanti</h3>
+                <p className="text-primary-gold font-medium mb-6">  Founder & Managing Director</p>
                 <p className="text-gray-600 mb-6">
-                  Ms. Priya Sharma brings 15 years of international experience in real estate 
-                  development and management. Since taking over as MD in 2018, she has driven 
+                  Mr. Sagar Donakanti  brings 5 years of international experience in real estate 
+                  development and management. Since taking over as MD in 2020, she has driven 
                   innovation, operational excellence, and digital transformation across all 
                   company projects.
                 </p>
