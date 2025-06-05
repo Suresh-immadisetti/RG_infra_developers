@@ -1,7 +1,7 @@
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import logo from '../assets/logo.png'; // Adjust the path according to your project structure
+import logo from '../../assets/logo.png'; // Adjusted path to go outside src
 
 // Define the interface for Footer props
 interface FooterProps {
@@ -43,7 +43,7 @@ const Footer = ({ visitorCount }: FooterProps) => {
               <img 
                 src={logo} 
                 alt="RG Infra Developers Logo" 
-                className="h-16 " // Adjust height as needed
+                className="h-16" // Adjust height as needed
               />
               <div>
                 <span className="font-playfair font-bold text-xl block">RG INFRA</span>

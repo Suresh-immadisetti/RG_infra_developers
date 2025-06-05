@@ -31,7 +31,7 @@ const Navbar = () => {
             <img 
               src={logo} 
               alt="RG Infra Developers Logo" 
-              className="h-20 w-auto" // Adjust height as needed
+              className="h-16 w-auto" // Adjust height as needed
             />
             <div className={`transition-colors duration-300 ${isScrolled ? 'text-primary-blue' : 'text-white'}`}>
               <span className="font-playfair font-bold text-xl md:text-2xl">RG INFRA</span>

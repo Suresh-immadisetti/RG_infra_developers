@@ -40,7 +40,7 @@ const About = () => {
                 estate development companies.
               </p>
               <p className="text-gray-600 mb-6">
-                Over the past 18 years, we have successfully delivered over 50 projects spanning 
+                Over the past 5 years, we have successfully delivered over 20 projects spanning 
                 residential complexes, commercial buildings, and integrated townships. Our journey 
                 has been defined by an unwavering commitment to quality, innovation, and customer 
                 satisfaction.
