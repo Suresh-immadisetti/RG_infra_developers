@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Building2, Menu, X, Phone, Mail } from 'lucide-react';
+import { Menu, X, Phone, Mail } from 'lucide-react';
+import logo from '../assets/logo.png'; // Adjust the path according to your project structure
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,8 +27,12 @@ const Navbar = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <Building2 size={30} className="text-primary-gold mr-2" />
+          <Link to="/" className="flex items-center gap-3">
+            <img 
+              src={logo} 
+              alt="RG Infra Developers Logo" 
+              className="h-20 w-auto" // Adjust height as needed
+            />
             <div className={`transition-colors duration-300 ${isScrolled ? 'text-primary-blue' : 'text-white'}`}>
               <span className="font-playfair font-bold text-xl md:text-2xl">RG INFRA</span>
               <span className="text-primary-gold ml-1 font-playfair font-bold">DEVELOPERS</span>

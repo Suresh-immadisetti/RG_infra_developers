@@ -1,6 +1,7 @@
-import { Building2, Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import logo from '../assets/logo.png'; // Adjust the path according to your project structure
 
 // Define the interface for Footer props
 interface FooterProps {
@@ -38,11 +39,15 @@ const Footer = ({ visitorCount }: FooterProps) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center">
-              <Building2 size={28} className="text-primary-gold mr-2" />
+            <div className="flex items-center gap-3">
+              <img 
+                src={logo} 
+                alt="RG Infra Developers Logo" 
+                className="h-16 " // Adjust height as needed
+              />
               <div>
-                <span className="font-playfair font-bold text-xl">RG INFRA</span>
-                <span className="text-primary-gold ml-1 font-playfair font-bold">DEVELOPERS</span>
+                <span className="font-playfair font-bold text-xl block">RG INFRA</span>
+                <span className="text-primary-gold font-playfair font-bold text-xl">DEVELOPERS</span>
               </div>
             </div>
             <p className="text-gray-300 mt-4">

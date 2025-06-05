@@ -143,7 +143,7 @@ const About = () => {
                 <p className="text-primary-gold font-medium mb-6">  Founder & Managing Director</p>
                 <p className="text-gray-600 mb-6">
                   Mr. Sagar Donakanti  brings 5 years of international experience in real estate 
-                  development and management. Since taking over as MD in 2020, she has driven 
+                  development and management. Since taking over as MD in 2020, He has driven 
                   innovation, operational excellence, and digital transformation across all 
                   company projects.
                 </p>

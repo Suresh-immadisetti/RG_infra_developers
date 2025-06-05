@@ -128,10 +128,10 @@ const AboutSection = () => {
         
         {/* Stats/counter section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-20">
-          <AnimatedCounter value={10} title="Projects Completed" icon={Building} />
+          <AnimatedCounter value={20} title="Projects Completed" icon={Building} />
           <AnimatedCounter value={500} title="Happy Families" icon={Users} />
           <AnimatedCounter value={3} title="Years of Experience" icon={Award} />
-          <AnimatedCounter value={5} title="Ongoing Projects" icon={PenTool} />
+          <AnimatedCounter value={10} title="Ongoing Projects" icon={PenTool} />
         </div>
       </div>
     </section>
