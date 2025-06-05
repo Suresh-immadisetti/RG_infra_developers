@@ -1,13 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
 
-import runsEraLogo from '../assets/logos/runs_era.png';
-import njrLogo from '../assets/logos/njr.png';
-import vertexLogo from '../assets/logos/vertex.png';
-import hallmarkLogo from '../assets/logos/hallmark.png';
+import runsEraLogo from '../../assets/logos/runs_era.png';
+import njrLogo from '../../assets/logos/njr.png';
+import vertexLogo from '../../assets/logos/vertex.png';
+import hallmarkLogo from '../../assets/logos/hallmark.png';
 
-import saiAvatar from '../assets/avatars/sai.png';
-import rajeshAvatar from '../assets/avatars/rajesh.png';
-import sureshAvatar from '../assets/avatars/suresh.png';
+import saiAvatar from '../../assets/avatars/sai.png';
+import rajeshAvatar from '../../assets/avatars/rajesh.png';
+import sureshAvatar from '../../assets/avatars/suresh.png';
 
 // Sample client data with local images
 const clients = [
