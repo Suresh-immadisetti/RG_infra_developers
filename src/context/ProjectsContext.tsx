@@ -1,5 +1,48 @@
 import { createContext, useState, useContext, ReactNode } from 'react';
 
+// Import all thumbnails
+import venkateswaraheightsThumb from '../../assets/projects/Venkateswara-heights/thumbnail.jpg';
+import businessParkThumb from '../../assets/projects/Business-Park/thumbnail.jpg';
+import butterflyResidencyThumb from '../../assets/projects/Butterfly-residency/thumbnail.jpg';
+import runseraThumb from '../../assets/projects/runsera/thumbnail.jpg';
+import gemsResidencesThumb from '../../assets/projects/Gems-residences/thumbnail.jpg';
+import armoorSiteThumb from '../../assets/projects/Armoor-Site/thumbnail.jpg';
+import indalwaiThumb from '../../assets/projects/Indalwai/thumbnail.jpg';
+import attapurSiteThumb from '../../assets/projects/Attapur-Site/thumbnail.jpg';
+
+// Import all project images
+import venkateswaraheightsImg1 from '../../assets/projects/Venkateswara-heights/image1.jpg';
+import venkateswaraheightsImg2 from '../../assets/projects/Venkateswara-heights/image2.jpg';
+import venkateswaraheightsImg3 from '../../assets/projects/Venkateswara-heights/image3.jpg';
+
+import businessParkImg1 from '../../assets/projects/Business-Park/image1.jpg';
+import businessParkImg2 from '../../assets/projects/Business-Park/image2.jpg';
+import businessParkImg3 from '../../assets/projects/Business-Park/image3.jpg';
+
+import butterflyResidencyImg1 from '../../assets/projects/Butterfly-residency/image1.jpg';
+import butterflyResidencyImg2 from '../../assets/projects/Butterfly-residency/image2.jpg';
+import butterflyResidencyImg3 from '../../assets/projects/Butterfly-residency/image3.jpg';
+
+import runseraImg1 from '../../assets/projects/runsera/image1.jpg';
+import runseraImg2 from '../../assets/projects/runsera/image2.jpg';
+import runseraImg3 from '../../assets/projects/runsera/image3.jpg';
+
+import gemsResidencesImg1 from '../../assets/projects/Gems-residences/image1.jpg';
+import gemsResidencesImg2 from '../../assets/projects/Gems-residences/image2.jpg';
+import gemsResidencesImg3 from '../../assets/projects/Gems-residences/image3.jpg';
+
+import armoorSiteImg1 from '../../assets/projects/Armoor-Site/image1.jpg';
+import armoorSiteImg2 from '../../assets/projects/Armoor-Site/image2.jpg';
+import armoorSiteImg3 from '../../assets/projects/Armoor-Site/image3.jpg';
+
+import indalwaiImg1 from '../../assets/projects/Indalwai/image1.jpg';
+import indalwaiImg2 from '../../assets/projects/Indalwai/image2.jpg';
+import indalwaiImg3 from '../../assets/projects/Indalwai/image3.jpg';
+
+import attapurSiteImg1 from '../../assets/projects/Attapur-Site/image1.jpg';
+import attapurSiteImg2 from '../../assets/projects/Attapur-Site/image2.jpg';
+import attapurSiteImg3 from '../../assets/projects/Attapur-Site/image3.jpg';
+
 // Types
 export type ProjectStatus = 'upcoming' | 'present' | 'completed';
 
@@ -31,7 +74,7 @@ interface ProjectsContextType {
 
 const ProjectsContext = createContext<ProjectsContextType | undefined>(undefined);
 
-// Sample project data
+// Sample project data with imported images
 const initialProjects: Project[] = [
   {
     id: '1',
@@ -39,11 +82,11 @@ const initialProjects: Project[] = [
     location: 'Jubilee Hills, Hyderabad',
     description: 'Luxury apartments with panoramic city views, offering 3 & 4 BHK configurations with world-class amenities and sustainable design features.',
     status: 'present',
-    thumbnailUrl: 'src/assets/projects/Venkateswara-heights/thumbnail.jpg',
+    thumbnailUrl: venkateswaraheightsThumb,
     images: [
-      'src/assets/projects/Venkateswara-heights/image1.jpg',
-      'src/assets/projects/Venkateswara-heights/image2.jpg',
-      'src/assets/projects/Venkateswara-heights/image3.jpg'
+      venkateswaraheightsImg1,
+      venkateswaraheightsImg2,
+      venkateswaraheightsImg3
     ],
     features: [
       'Infinity pool with city views',
@@ -68,11 +111,11 @@ const initialProjects: Project[] = [
     location: 'HITEC City, Hyderabad',
     description: 'Premium office spaces designed for the modern workforce with state-of-the-art facilities and excellent connectivity to major transportation hubs.',
     status: 'upcoming',
-    thumbnailUrl: 'src/assets/projects/Business-Park/thumbnail.jpg',
+    thumbnailUrl: businessParkThumb,
     images: [
-      'src/assets/projects/Business-Park/image1.jpg',
-      'src/assets/projects/Business-Park/image2.jpg',
-      'src/assets/projects/Business-Park/image3.jpg'
+      businessParkImg1,
+      businessParkImg2,
+      businessParkImg3
     ],
     features: [
       'Grade A Office Spaces',
@@ -97,11 +140,11 @@ const initialProjects: Project[] = [
     location: 'Gachibowli, Hyderabad',
     description: 'Exclusive gated community of luxury villas with private gardens, designed for families seeking space, privacy and premium amenities.',
     status: 'present',
-    thumbnailUrl: 'src/assets/projects/Butterfly-residency/thumbnail.jpg',
+    thumbnailUrl: butterflyResidencyThumb,
     images: [
-      'src/assets/projects/Butterfly-residency/image1.jpg',
-      'src/assets/projects/Butterfly-residency/image2.jpg',
-      'src/assets/projects/Butterfly-residency/image3.jpg'
+      butterflyResidencyImg1,
+      butterflyResidencyImg2,
+      butterflyResidencyImg3
     ],
     features: [
       'Private swimming pools',
@@ -126,11 +169,11 @@ const initialProjects: Project[] = [
     location: 'Banjara Hills, Hyderabad',
     description: 'A premium shopping destination with international brands, gourmet dining options, Digital marketing company interior design',
     status: 'completed',
-    thumbnailUrl: 'src/assets/projects/runsera/thumbnail.jpg',
+    thumbnailUrl: runseraThumb,
     images: [
-      'src/assets/projects/runsera/image1.jpg',
-      'src/assets/projects/runsera/image2.jpg',
-      'src/assets/projects/runsera/image3.jpg'
+      runseraImg1,
+      runseraImg2,
+      runseraImg3
     ],
     features: [
       'Premium retail spaces',
@@ -155,11 +198,11 @@ const initialProjects: Project[] = [
     location: 'Gachibowli, Hyderabad',
     description: 'Contemporary apartments with smart home features, designed for young professionals with an emphasis on community living and convenience.',
     status: 'upcoming',
-    thumbnailUrl: 'src/assets/projects/Gems-residences/thumbnail.jpg',
+    thumbnailUrl: gemsResidencesThumb,
     images: [
-      'src/assets/projects/Gems-residences/image1.jpg',
-      'src/assets/projects/Gems-residences/image2.jpg',
-      'src/assets/projects/Gems-residences/image3.jpg'
+      gemsResidencesImg1,
+      gemsResidencesImg2,
+      gemsResidencesImg3
     ],
     features: [
       'Co-working spaces',
@@ -184,11 +227,11 @@ const initialProjects: Project[] = [
     location: 'Armoor, Nizamabad',
     description: 'A completed residential project that blends traditional aesthetics with modern amenities, creating an oasis of calm in the urban landscape.',
     status: 'completed',
-    thumbnailUrl: 'src/assets/projects/Armoor-Site/thumbnail.jpg',
+    thumbnailUrl: armoorSiteThumb,
     images: [
-      'src/assets/projects/Armoor-Site/image1.jpg',
-      'src/assets/projects/Armoor-Site/image2.jpg',
-      'src/assets/projects/Armoor-Site/image3.jpg'
+      armoorSiteImg1,
+      armoorSiteImg2,
+      armoorSiteImg3
     ],
     features: [
       'Classical architecture',
@@ -213,11 +256,11 @@ const initialProjects: Project[] = [
     location: 'Indalwai, Nizamabad',
     description: 'A completed residential project that blends traditional aesthetics with modern amenities, creating an oasis of calm in the urban landscape.',
     status: 'completed',
-    thumbnailUrl: 'src/assets/projects/Indalwai/thumbnail.jpg',
+    thumbnailUrl: indalwaiThumb,
     images: [
-      'src/assets/projects/Indalwai/image1.jpg',
-      'src/assets/projects/Indalwai/image2.jpg',
-      'src/assets/projects/Indalwai/image3.jpg'
+      indalwaiImg1,
+      indalwaiImg2,
+      indalwaiImg3
     ],
     features: [
       'Classical architecture',
@@ -242,11 +285,11 @@ const initialProjects: Project[] = [
     location: 'Attapur, Hyderabad',
     description: 'A completed residential project that blends traditional aesthetics with modern amenities, creating an oasis of calm in the urban landscape.',
     status: 'completed',
-    thumbnailUrl: 'src/assets/projects/Attapur-Site/thumbnail.jpg',
+    thumbnailUrl: attapurSiteThumb,
     images: [
-      'src/assets/projects/Attapur-Site/image1.jpg',
-      'src/assets/projects/Attapur-Site/image2.jpg',
-      'src/assets/projects/Attapur-Site/image3.jpg'
+      attapurSiteImg1,
+      attapurSiteImg2,
+      attapurSiteImg3
     ],
     features: [
       'Classical architecture',
@@ -267,6 +310,7 @@ const initialProjects: Project[] = [
   }
 ];
 
+// Rest of your context provider code remains the same...
 export const ProjectsProvider = ({ children }: { children: ReactNode }) => {
   const [projects, setProjects] = useState<Project[]>(initialProjects);
   const [filteredProjects, setFilteredProjects] = useState<Project[]>(initialProjects);

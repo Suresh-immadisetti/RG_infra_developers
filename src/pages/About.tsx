@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import { Award, Target, Users, Shield, Activity, Map } from 'lucide-react';
 // Import images from assets
-import ChairmanImage from '../assets/chairman.jpg';
-import MDImage from '../assets/md.jpg';
-import CompanyHistoryImage from '../assets/company-history.jpg';
+import ChairmanImage from '../../assets/chairman.jpg';
+import MDImage from '../../assets/md.jpg';
+import CompanyHistoryImage from '../../assets/company-history.jpg';
 
 const About = () => {
   useEffect(() => {

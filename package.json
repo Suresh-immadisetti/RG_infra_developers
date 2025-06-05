@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "homepage": "https://Suresh-immadisetti.github.io/RG_infra_developers",
+  "homepage": "https://rginfradevelopers.com",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

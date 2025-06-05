@@ -1,9 +1,9 @@
 // vite.config.js
-import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/RG_infra_developers/', // 👈 Must match your GitHub repo name
+  base: '/', // 👈 Must match your GitHub repo name
   plugins: [react()],
   optimizeDeps: {
     exclude: ['lucide-react'],
