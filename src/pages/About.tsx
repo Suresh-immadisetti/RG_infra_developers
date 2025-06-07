@@ -300,7 +300,7 @@ const About = () => {
             <p className="text-lg md:text-xl mb-6 md:mb-8">
               Discover how RG Infra Developers can help you find your dream property or investment opportunity.
             </p>
-            <a href="/contact" className="inline-block bg-primary-gold hover:bg-yellow-600 text-white font-medium py-2 px-6 md:py-3 md:px-8 rounded-lg transition-colors">
+            <a href="#contact" className="inline-block bg-primary-gold hover:bg-yellow-600 text-white font-medium py-2 px-6 md:py-3 md:px-8 rounded-lg transition-colors">
               Contact Us Today
             </a>
           </div>
