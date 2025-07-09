@@ -10,10 +10,10 @@ const CtaSection = () => {
             Schedule a consultation with our experts to explore how RG Infra Developers can help you find the perfect space.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="btn btn-primary flex items-center justify-center sm:justify-start gap-2">
+            <a href="#contact" className="btn btn-primary flex items-center justify-center sm:justify-start gap-2">
               Contact Us <ArrowRight size={18} />
             </a>
-            <a href="/projects" className="btn btn-outline flex items-center justify-center sm:justify-start gap-2">
+            <a href="#projects" className="btn btn-outline flex items-center justify-center sm:justify-start gap-2">
               Browse Projects <ArrowRight size={18} />
             </a>
           </div>

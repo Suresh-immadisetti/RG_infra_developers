@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter  as Router, Routes, Route, useLocation, useSearchParams } from 'react-router-dom';
+import {  HashRouter  as Router, Routes, Route, useLocation, useSearchParams } from 'react-router-dom';
 import { ProjectStatus } from './context/ProjectsContext';
 
 // Pages

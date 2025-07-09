@@ -121,8 +121,7 @@ const Footer = ({ visitorCount }: FooterProps) => {
               <li className="flex items-center">
                 <Mail size={20} className="text-primary-gold mr-3 flex-shrink-0" />
                 <a href="mailto:rginfradevelopersinfo@gmail.com" className="text-gray-300 hover:text-primary-gold transition-colors">
-                  rginfradevelopersinfo@gmail.com
-                </a>
+Info@rginfradevelopers.com                </a>
               </li>
             </ul>
           </div>

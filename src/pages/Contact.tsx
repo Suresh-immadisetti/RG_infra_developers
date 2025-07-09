@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { MapPin, Phone, Mail, Clock, Send, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Clock, Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Send, Twitter } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 interface FormData {
   name: string;
@@ -176,8 +176,7 @@ const Contact = () => {
                       <h3 className="text-lg font-medium">Email Us</h3>
                       <p className="text-gray-600 mt-1">
                         <a href="mailto:rginfradevelopersinfo@gmail.com" className="hover:text-primary-gold transition-colors">
-                          rginfradevelopersinfo@gmail.com
-                        </a>
+Info@rginfradevelopers.com                        </a>
                       </p>
                     </div>
                   </div>

@@ -43,7 +43,7 @@ const HeroSection = () => {
             <a href="#projects" className="btn btn-primary flex items-center justify-center sm:justify-start gap-2">
               Explore Our Projects <ArrowRight size={18} />
             </a>
-            <a href="/contact" className="btn btn-outline flex items-center justify-center sm:justify-start gap-2">
+            <a href="#contact" className="btn btn-outline flex items-center justify-center sm:justify-start gap-2">
               Connect With Us <ArrowRight size={18} />
             </a>
           </div>
