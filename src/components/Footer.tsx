@@ -55,16 +55,16 @@ const Footer = ({ visitorCount }: FooterProps) => {
               with a perfect blend of innovation, quality and timeless design.
             </p>
             <div className="flex space-x-4 mt-4">
-              <a href="#" aria-label="Facebook" className="text-gray-300 hover:text-primary-gold transition-colors">
+              <a href="https://www.facebook.com/" aria-label="Facebook" className="text-gray-300 hover:text-primary-gold transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="#" aria-label="Twitter" className="text-gray-300 hover:text-primary-gold transition-colors">
+              <a href="https://x.com/" aria-label="Twitter" className="text-gray-300 hover:text-primary-gold transition-colors">
                 <Twitter size={20} />
               </a>
-              <a href="#" aria-label="Instagram" className="text-gray-300 hover:text-primary-gold transition-colors">
+              <a href="https://www.instagram.com/rginfradevelopers?igsh=MTJvc2F4ZWgzcWttcQ==" aria-label="Instagram" className="text-gray-300 hover:text-primary-gold transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="#" aria-label="LinkedIn" className="text-gray-300 hover:text-primary-gold transition-colors">
+              <a href="https://www.linkedin.com/company/rg-infra-developers/" aria-label="LinkedIn" className="text-gray-300 hover:text-primary-gold transition-colors">
                 <Linkedin size={20} />
               </a>
             </div>

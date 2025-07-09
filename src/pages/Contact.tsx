@@ -205,28 +205,28 @@ const Contact = () => {
                   <h3 className="text-lg font-medium mb-4">Follow Us</h3>
                   <div className="flex space-x-4">
                     <a 
-                      href="#" 
+                      href="https://www.facebook.com/" 
                       className="h-10 w-10 rounded-full bg-gray-100 hover:bg-blue-600 hover:text-white transition-colors flex items-center justify-center text-blue-600"
                       aria-label="Follow on Facebook"
                     >
                       <Facebook size={18} />
                     </a>
                     <a 
-                      href="#" 
+                      href="https://x.com/" 
                       className="h-10 w-10 rounded-full bg-gray-100 hover:bg-sky-500 hover:text-white transition-colors flex items-center justify-center text-sky-500"
                       aria-label="Follow on Twitter"
                     >
                       <Twitter size={18} />
                     </a>
                     <a 
-                      href="#" 
+                      href="https://www.instagram.com/rginfradevelopers?igsh=MTJvc2F4ZWgzcWttcQ==" 
                       className="h-10 w-10 rounded-full bg-gray-100 hover:bg-pink-600 hover:text-white transition-colors flex items-center justify-center text-pink-600"
                       aria-label="Follow on Instagram"
                     >
                       <Instagram size={18} />
                     </a>
                     <a 
-                      href="#" 
+                      href="https://www.linkedin.com/company/rg-infra-developers/" 
                       className="h-10 w-10 rounded-full bg-gray-100 hover:bg-blue-700 hover:text-white transition-colors flex items-center justify-center text-blue-700"
                       aria-label="Follow on LinkedIn"
                     >
