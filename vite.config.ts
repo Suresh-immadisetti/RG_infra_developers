@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default defineConfig({
-  base: '/RG_infra_developers/', // ✅ THIS is the fix
+  base: '/', // 
   plugins: [react()],
   optimizeDeps: {
     exclude: ['lucide-react'],
